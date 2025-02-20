@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1BCA5B19-BEB1-4966-BC3B-81C7B92DFBAE}</ProjectGuid>
+    <RootNamespace>RobotSoccerProgram</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(VC_InstallDir)atlmfc\lib\x64;$(VC_InstallDir)atlmfc\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\opencv\build\x64\vc16\lib;C:\OpenCV2.1\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>library/opencv;library/framedc;library/dualslider;library/editcolor;library/colorpicker</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>library/atlstlib;C:\Users\jamie\OneDrive\Desktop\Uni\4.Fourth Year\COMPSYS 700AB\soccer_robot_2020\Robot Soccer SW\2. Codes\source code %28ENGLISH%29\RobotSoccerProgram\library\Atlsd;library/opencv;library/framedc;library/dualslider;library/editcolor;library/colorpicker;library/Atlsd</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cv210.lib;cxcore210.lib;highgui210.lib;framedcD.lib;DualSliderD.lib;EditColorD.lib;ColorPickerD.lib;atlsd.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;_WIN64;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);_WIN64;_WIN64</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>library/opencv;library/framedc;library/dualslider;library/editcolor;library/colorpicker</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>library/atlstlib;C:\Users\jamie\OneDrive\Desktop\Uni\4.Fourth Year\COMPSYS 700AB\soccer_robot_2020\Robot Soccer SW\2. Codes\source code %28ENGLISH%29\RobotSoccerProgram\library\Atlsd;library/opencv;library/framedc;library/dualslider;library/editcolor;library/colorpicker;library/Atlsd</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cv210.lib;cxcore210.lib;highgui210.lib;framedcD.lib;DualSliderD.lib;EditColorD.lib;ColorPickerD.lib;atlsd.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\OpenCV2.1\bin;C:\OpenCV2.1\lib;library/opencv;library/framedc;library/dualslider;library/editcolor;library/colorpicker;C:\opencv\build\include</AdditionalIncludeDirectories>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\OpenCV2.1\lib;C:\opencv\build\x64\vc16\lib;library/opencv;library/framedc;library/dualslider;library/editcolor;library/colorpicker</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cv210.lib;cxcore210.lib;highgui210.lib;framedc.lib;dualslider.lib;EditColor.lib;ColorPicker.lib;legacy_stdio_definitions.lib;opencv_world4100.lib;opencv_world4100d.lib</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WINDOWS;_WIN64;NDEBUG;%(PreprocessorDefinitions);_WIN64;_WIN64</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>library/opencv;library/framedc;library/dualslider;library/editcolor;library/colorpicker</AdditionalIncludeDirectories>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>library/opencv;library/framedc;library/dualslider;library/editcolor;library/colorpicker</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cv210.lib;cxcore210.lib;highgui210.lib;framedc.lib;dualslider.lib;EditColor.lib;ColorPicker.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\bitmap1.bmp" />
+    <None Include="res\hide.cur" />
+    <None Include="res\list.bmp" />
+    <None Include="res\list_behavior.bmp" />
+    <None Include="res\list_role.bmp" />
+    <None Include="res\list_roleassign.bmp" />
+    <None Include="res\list_situation.bmp" />
+    <None Include="res\revision0.cur" />
+    <None Include="res\revision1.cur" />
+    <None Include="res\revision2.cur" />
+    <None Include="res\revision3.cur" />
+    <None Include="res\revision4.cur" />
+    <None Include="res\RobotSoccerProgram.ico" />
+    <None Include="res\RobotSoccerProgram.rc2" />
+    <None Include="res\tree_strategy.bmp" />
+    <None Include="res\tree_strategy_role.bmp" />
+    <None Include="res\zoom1.cur" />
+    <None Include="res\zoom2.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutopositionData.h" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="BallDraw.h" />
+    <ClInclude Include="ColorSampleData.h" />
+    <ClInclude Include="CommQueue.h" />
+    <ClInclude Include="CommThread.h" />
+    <ClInclude Include="CubicSpline.h" />
+    <ClInclude Include="Curve.h" />
+    <ClInclude Include="FontPropertySheet.h" />
+    <ClInclude Include="GameGUI.h" />
+    <ClInclude Include="GameRun.h" />
+    <ClInclude Include="Ground.h" />
+    <ClInclude Include="DisplayResources.h" />
+    <ClInclude Include="ImageGrabber_File.h" />
+    <ClInclude Include="ImageGrabber_Standard.h" />
+    <ClInclude Include="ImageGrabber_USBCam.h" />
+    <ClInclude Include="LookUpTable.h" />
+    <ClInclude Include="Mission.h" />
+    <ClInclude Include="MissionSet.h" />
+    <ClInclude Include="ObjectPositionInfo.h" />
+    <ClInclude Include="ObjectVelocityInfo.h" />
+    <ClInclude Include="PathCubicSpline.h" />
+    <ClInclude Include="PointDouble.h" />
+    <ClInclude Include="PolygonMouse.h" />
+    <ClInclude Include="PropertyPageColorSetting.h" />
+    <ClInclude Include="PropertyPageGame.h" />
+    <ClInclude Include="PropertyPageRobotSoccer.h" />
+    <ClInclude Include="PropertyPageStrategyGUI.h" />
+    <ClInclude Include="PropertyPageVision.h" />
+    <ClInclude Include="PropertyPageVisionCoreBarPatch.h" />
+    <ClInclude Include="PropertyPageVisionCoreDiagonalPatch.h" />
+    <ClInclude Include="PropertyPageVisionCoreSegmentPatch.h" />
+    <ClInclude Include="RectDouble.h" />
+    <ClInclude Include="RectMouse.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Revision.h" />
+    <ClInclude Include="Robot.h" />
+    <ClInclude Include="RobotDraw.h" />
+    <ClInclude Include="RobotSoccerCommon.h" />
+    <ClInclude Include="RobotSoccerProgram.h" />
+    <ClInclude Include="RobotSoccerProgramDlg.h" />
+    <ClInclude Include="ScreenObject.h" />
+    <ClInclude Include="SetPlayData.h" />
+    <ClInclude Include="Situation.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StrategyCore.h" />
+    <ClInclude Include="StrategyGUI.h" />
+    <ClInclude Include="StrategyParameter.h" />
+    <ClInclude Include="StrategyParameterDlg.h" />
+    <ClInclude Include="SynchronousModule.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TimeCheck.h" />
+    <ClInclude Include="TimeGraph.h" />
+    <ClInclude Include="VelocityParameter.h" />
+    <ClInclude Include="VelocityParameter2.h" />
+    <ClInclude Include="VelocityParameterDlg.h" />
+    <ClInclude Include="VelocityParameterDlg2.h" />
+    <ClInclude Include="VisionCore.h" />
+    <ClInclude Include="VisionCoreDiagonalPatch.h" />
+    <ClInclude Include="VisionCore_BarPatch.h" />
+    <ClInclude Include="VisionCore_Segment.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutopositionData.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="BallDraw.cpp" />
+    <ClCompile Include="ColorSampleData.cpp" />
+    <ClCompile Include="CommQueue.cpp" />
+    <ClCompile Include="CommThread.cpp" />
+    <ClCompile Include="CubicSpline.cpp" />
+    <ClCompile Include="Curve.cpp" />
+    <ClCompile Include="FontPropertySheet.cpp" />
+    <ClCompile Include="GameGUI.cpp" />
+    <ClCompile Include="GameRun.cpp" />
+    <ClCompile Include="Ground.cpp" />
+    <ClCompile Include="ImageGrabber_File.cpp" />
+    <ClCompile Include="ImageGrabber_Standard.cpp" />
+    <ClCompile Include="ImageGrabber_USBCam.cpp" />
+    <ClCompile Include="LookUpTable.cpp" />
+    <ClCompile Include="Mission.cpp" />
+    <ClCompile Include="MissionSet.cpp" />
+    <ClCompile Include="ObjectPositionInfo.cpp" />
+    <ClCompile Include="ObjectVelocityInfo.cpp" />
+    <ClCompile Include="PathCubicSpline.cpp" />
+    <ClCompile Include="PointDouble.cpp" />
+    <ClCompile Include="PolygonMouse.cpp" />
+    <ClCompile Include="PropertyPageColorSetting.cpp" />
+    <ClCompile Include="PropertyPageGame.cpp" />
+    <ClCompile Include="PropertyPageRobotSoccer.cpp" />
+    <ClCompile Include="PropertyPageStrategyGUI.cpp" />
+    <ClCompile Include="PropertyPageVision.cpp" />
+    <ClCompile Include="PropertyPageVisionCoreBarPatch.cpp" />
+    <ClCompile Include="PropertyPageVisionCoreDiagonalPatch.cpp" />
+    <ClCompile Include="PropertyPageVisionCoreSegmentPatch.cpp" />
+    <ClCompile Include="RectDouble.cpp" />
+    <ClCompile Include="RectMouse.cpp" />
+    <ClCompile Include="Revision.cpp" />
+    <ClCompile Include="Robot.cpp" />
+    <ClCompile Include="RobotDraw.cpp" />
+    <ClCompile Include="RobotSoccerCommon.cpp" />
+    <ClCompile Include="RobotSoccerProgram.cpp" />
+    <ClCompile Include="RobotSoccerProgramDlg.cpp" />
+    <ClCompile Include="ScreenObject.cpp" />
+    <ClCompile Include="SetPlayData.cpp" />
+    <ClCompile Include="Situation.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StrategyCore.cpp" />
+    <ClCompile Include="StrategyGUI.cpp" />
+    <ClCompile Include="StrategyParameter.cpp" />
+    <ClCompile Include="StrategyParameterDlg.cpp" />
+    <ClCompile Include="SynchronousModule.cpp" />
+    <ClCompile Include="TimeCheck.cpp" />
+    <ClCompile Include="TimeGraph.cpp" />
+    <ClCompile Include="VelocityParameter.cpp" />
+    <ClCompile Include="VelocityParameter2.cpp" />
+    <ClCompile Include="VelocityParameterDlg.cpp" />
+    <ClCompile Include="VelocityParameterDlg2.cpp" />
+    <ClCompile Include="VisionCore.cpp" />
+    <ClCompile Include="VisionCoreDiagonalPatch.cpp" />
+    <ClCompile Include="VisionCore_BarPatch.cpp" />
+    <ClCompile Include="VisionCore_Segment.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RobotSoccerProgram.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="RobotSoccerProgram.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
