@@ -1,13 +1,26 @@
 # Robot Soccer Software
 ### Instruction
-- There are many error such as version, configuration error, dependency error etc
-- To figure out this error I will suggest this instruction.
+- There are many errors such as version, configuration error, dependency errors, etc
+- To figure out this error, I will suggest this instruction.
 
-1. Use Visual Studio rather than visual studio code. It is easier to compile.
-2. This program was compiled in 32 bit, and we will compile this progam in 64 bit.
+1. Use Visual Studio rather than Visual Studio Code. It is easier to compile.
+2. This program was compiled in 32 bits, and we will compile this program in 64 bits.
 3. To figure out this, project -> properties -> configuration manager -> create x64 in solution platform
 
 
 
 
 ### Error
+#### Program run error
+1. The program is not open on some Windows 10 and Windows 11 computers.
+2. The application is open and closed directly. The program crashed with the ntdll.dll file, which isa  core program in Windows
+
+#### Compile to 64-bit
+1. To upgrade the program, if it is compiled in 64-bit, it shows an LNK2001 error, which is a linking error.
+2. The error means that the current compiled program and library file cannot linked.
+3. The reason is that the current library file is made under 32-bit, and it's suitable for 32-bit programs.
+4. Therefore, If this program is compiled 64bit, it cannot link.
+
+#### Compile to 32-bit
+1. If I compile this program in 32-bit, it is successfully compiled.
+2. However, sometimes the program turns off directly after opening.
